@@ -32,6 +32,6 @@ python.exe main.py https://mail.ru/
 python.exe main.py https://bit.ly/3GwsETo
 ```
 
-Цель проекта
+## Цель проекта
 
 Код написан в образовательных целях на онлайн-курсе для веб-разработчиков [dvmn.org](https://dvmn.org/).
