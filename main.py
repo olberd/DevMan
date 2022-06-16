@@ -5,13 +5,6 @@ from urllib.parse import urlparse
 from dotenv import load_dotenv
 
 
-load_dotenv()
-
-
-BITLY_TOKEN = os.environ['TOKEN_BITLY']
-BITLY_URL = 'https://api-ssl.bitly.com/v4/bitlinks/'
-
-
 def shorten_link(token, link):
     headers = {
       'Authorization': f'Bearer {token}'
@@ -68,4 +61,7 @@ def main():
 
 
 if __name__ == '__main__':
+    load_dotenv()
+    BITLY_TOKEN = os.environ['TOKEN_BITLY']
+    BITLY_URL = 'https://api-ssl.bitly.com/v4/bitlinks/'
     main()
