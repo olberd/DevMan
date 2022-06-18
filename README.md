@@ -25,12 +25,13 @@ bit.ly/сокращенная_ссылка
 
 Пример использования:
 
-```
-python.exe main.py https://mail.ru/
+
+`python.exe main.py https://mail.ru/`
 
 или с сокращенной ссылкой
-python.exe main.py https://bit.ly/3GwsETo
-```
+
+`python.exe main.py https://bit.ly/3GwsETo`
+
 
 ## Цель проекта
 
