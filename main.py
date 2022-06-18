@@ -44,21 +44,21 @@ def is_bitlink(token, bitly_url, link):
 
 def main():
     load_dotenv()
-    BITLY_TOKEN = os.environ['TOKEN_BITLY']
-    BITLY_URL = 'https://api-ssl.bitly.com/v4/bitlinks/'
+    bitly_token = os.environ['TOKEN_BITLY']
+    bitly_url = 'https://api-ssl.bitly.com/v4/bitlinks/'
     parser = argparse.ArgumentParser(description='Сокращение ссылок')
     parser.add_argument('link', help='Введите ссылку')
     args = parser.parse_args()
     link = args.link
     try:
-        if is_bitlink(BITLY_TOKEN, BITLY_URL, link):
+        if is_bitlink(bitly_token, bitly_url, link):
             print(
                 'По вашей ссылке прошли:',
-                count_clicks(BITLY_TOKEN, BITLY_URL, link),
+                count_clicks(bitly_token, bitly_url, link),
                 'раз(а)'
             )
         else:
-            print('Битлинк', shorten_link(BITLY_TOKEN, BITLY_URL, link))
+            print('Битлинк', shorten_link(bitly_token, bitly_url, link))
     except requests.exceptions.HTTPError:
         print('Исправьте ссылку')
 
